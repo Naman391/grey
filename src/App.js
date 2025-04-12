@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
+import ProductListingPage from './pages/ProductListingPage';
+import ProductDetailPage from './pages/ProductDetailPage';
+import CartPage from './pages/CartPage';
+import Header from './components/Header';
 import './App.css';
 
 function App() {
+  const [cartCount, setCartCount] = useState(0);
+
+  const handleCartUpdate = (count) => {
+    setCartCount(count); // Update the cart count in the state
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header cartCount={cartCount} />
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/products" element={<ProductListingPage />} />
+        <Route path="/products/:id" element={<ProductDetailPage />} />
+        <Route path="/cart" element={<CartPage onCartUpdate={handleCartUpdate} />} />
+      </Routes>
+    </Router>
   );
 }
 

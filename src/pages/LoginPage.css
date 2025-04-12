@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff; 
+  margin-bottom: 20px;
+}
+
+.login-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.login-box label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.login-button {
+  width: 100%;
+  background-color: #007bff; /* Silicone's primary color */
+  border: 1px solid #0056b3;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.login-footer {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.login-footer a {
+  color: #007bff; /* Silicone's primary color */
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  width: 300px;
+}
+
+.login-divider hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.login-divider span {
+  margin: 0 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.create-account-button {
+  width: 300px;
+  background-color: #e7e9ec;
+  border: 1px solid #adb1b8;
+  color: #111;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.create-account-button:hover {
+  background-color: #d7d9dc;
+}
