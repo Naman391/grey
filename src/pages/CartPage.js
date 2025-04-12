@@ -7,13 +7,13 @@ function CartPage({ onCartUpdate }) {
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
     setCart(storedCart);
-    updateCartCount(storedCart); // Update the cart count on initial load
+    updateCartCount(storedCart); 
   }, []);
 
   const updateCartCount = (cart) => {
     const count = cart.reduce((total, item) => total + item.quantity, 0);
     if (onCartUpdate) {
-      onCartUpdate(count); // Call the onCartUpdate function to update the cart count
+      onCartUpdate(count); 
     }
   };
 
@@ -21,7 +21,7 @@ function CartPage({ onCartUpdate }) {
     const updatedCart = cart.filter((_, i) => i !== index);
     setCart(updatedCart);
     localStorage.setItem('cart', JSON.stringify(updatedCart));
-    updateCartCount(updatedCart); // Update the cart count after removing an item
+    updateCartCount(updatedCart); 
   };
 
   const handlePlaceOrder = () => {
