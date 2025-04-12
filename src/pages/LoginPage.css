@@ -49,7 +49,7 @@ body {
 
 .login-button {
   width: 100%;
-  background-color: #007bff; /* Silicone's primary color */
+  background-color: #007bff;
   border: 1px solid #0056b3;
   color: white;
   padding: 10px;
@@ -76,7 +76,7 @@ body {
 }
 
 .login-footer a {
-  color: #007bff; /* Silicone's primary color */
+  color: #007bff; 
   text-decoration: none;
 }
 
