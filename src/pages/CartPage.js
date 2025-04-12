@@ -24,6 +24,13 @@ function CartPage({ onCartUpdate }) {
     updateCartCount(updatedCart); // Update the cart count after removing an item
   };
 
+  const handlePlaceOrder = () => {
+    setCart([]);
+    localStorage.removeItem('cart');
+    alert('Your order has been placed successfully!');
+    updateCartCount([]); // Reset the cart count
+  };
+
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
@@ -46,6 +53,9 @@ function CartPage({ onCartUpdate }) {
             </div>
           ))}
           <h2 className="cart-total">Total: ${totalPrice.toFixed(2)}</h2>
+          <button className="cart-checkout-button" onClick={handlePlaceOrder}>
+            Place Order
+          </button>
         </div>
       )}
     </div>
